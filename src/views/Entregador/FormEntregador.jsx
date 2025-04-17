@@ -1,5 +1,5 @@
 import InputMask from 'comigo-tech-react-input-mask';
-import { default as React, default as React } from "react";
+import React from "react";
 import { Button, Container, Divider, Form, Icon, Select } from 'semantic-ui-react';
 export default function FormEntregador () {
 
@@ -154,14 +154,7 @@ export default function FormEntregador () {
                                     maxLength="100"
                                 /> 
 
-                                <FormField
-                                control={Select}
-                                label='Gender'
-                                options={options}
-                                placeholder='Gender'
-                            />
-
-
+                            
 
                             
                                 <Select placeholder='Selecione' options={estados} />

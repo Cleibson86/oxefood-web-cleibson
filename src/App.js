@@ -1,6 +1,7 @@
 import { Segment } from 'semantic-ui-react';
 import './App.css';
-import FormEntregador from './views/FormEntregador/FormEntregador';
+import FormEntregador from './views/Entregador/FormEntregador';
+
 
 
 function App() {
