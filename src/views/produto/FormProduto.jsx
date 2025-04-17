@@ -15,7 +15,7 @@ export default function FormProduto () {
 
                 <Container textAlign='justified' >
 
-                    <h2> <span style={{color: 'darkgray'}}> Cliente &nbsp;<Icon name='angle double right' size="small" /> </span> Produto </h2>
+                    <h2> <span style={{color: 'darkgray'}}> Produto &nbsp;<Icon name='angle double right' size="small" /> </span> Cadastro </h2>
 
                     <Divider />
 
@@ -49,7 +49,7 @@ export default function FormProduto () {
                                 <Form.Input
                                     fluid
                                     label='Descrição'
-                                    width={6}>
+                                    width={2}>
                                     <InputMask 
                                         mask="(99) 9999.9999"
                                     /> 
