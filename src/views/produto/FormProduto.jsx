@@ -5,21 +5,21 @@ import { Button, Container, Divider, Form, Icon } from 'semantic-ui-react';
 
 
 
-export default function FormProduto () {
+export default function FormProduto() {
 
     return (
 
         <div>
 
-            <div style={{marginTop: '3%'}}>
+            <div style={{ marginTop: '3%' }}>
 
                 <Container textAlign='justified' >
 
-                    <h2> <span style={{color: 'darkgray'}}> Produto &nbsp;<Icon name='angle double right' size="small" /> </span> Cadastro </h2>
+                    <h2> <span style={{ color: 'darkgray' }}> Produto &nbsp;<Icon name='angle double right' size="small" /> </span> Cadastro </h2>
 
                     <Divider />
 
-                    <div style={{marginTop: '4%'}}>
+                    <div style={{ marginTop: '4%' }}>
 
                         <Form>
 
@@ -39,29 +39,31 @@ export default function FormProduto () {
                                     <InputMask
                                         required
                                         mask="999.999.999-99"
-                                    /> 
+                                    />
                                 </Form.Input>
 
                             </Form.Group>
-                            
+
                             <Form.Group>
 
-                                <Form.Input
-                                    fluid
+                                <Form.TextArea
                                     label='Descrição'
-                                    width={2}>
-                                    <InputMask 
-                                        mask="(99) 9999.9999"
-                                    /> 
-                                </Form.Input>
+                                    placeholder='Informe a descrição do Produto'
+                                    style={{ width: '600%' }}
+                                />
+
+                            </Form.Group>
+
+                            <Form.Group>
+
 
                                 <Form.Input
                                     fluid
                                     label='Valor Unitario'
                                     width={6}>
-                                    <InputMask 
+                                    <InputMask
                                         mask="(99) 9999.9999"
-                                    /> 
+                                    />
                                 </Form.Input>
 
                                 <Form.Input
@@ -69,11 +71,11 @@ export default function FormProduto () {
                                     label='Tempo de Entega Minimo em Minutos'
                                     width={6}
                                 >
-                                    <InputMask 
-                                        mask="99/99/9999" 
+                                    <InputMask
+                                        mask="99/99/9999"
                                         maskChar={null}
-                                        placeholder="Ex: 20/03/1985"
-                                    /> 
+                                        placeholder="30"
+                                    />
                                 </Form.Input>
 
 
@@ -82,11 +84,11 @@ export default function FormProduto () {
                                     label='Tempo de Entega Máximo em Minutos'
                                     width={6}
                                 >
-                                    <InputMask 
-                                        mask="99/99/9999" 
+                                    <InputMask
+                                        mask="99/99/9999"
                                         maskChar={null}
-                                        placeholder="Ex: 20/03/1985"
-                                    /> 
+                                        placeholder="40"
+                                    />
                                 </Form.Input>
 
 
@@ -95,10 +97,10 @@ export default function FormProduto () {
 
 
                             </Form.Group>
-                        
+
                         </Form>
-                        
-                        <div style={{marginTop: '4%'}}>
+
+                        <div style={{ marginTop: '4%' }}>
 
                             <Button
                                 type="button"
@@ -109,9 +111,9 @@ export default function FormProduto () {
                                 color='orange'
                             >
                                 <Icon name='reply' />
-                                Voltar
+                                Listar
                             </Button>
-                                
+
                             <Button
                                 inverted
                                 circular
@@ -127,7 +129,7 @@ export default function FormProduto () {
                         </div>
 
                     </div>
-                    
+
                 </Container>
             </div>
         </div>

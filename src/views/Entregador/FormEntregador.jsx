@@ -43,10 +43,6 @@ export default function FormEntregador () {
                                     /> 
                                 </Form.Input>
 
-                            </Form.Group>
-                            
-                            <Form.Group>
-
                                 <Form.Input
                                     fluid
                                     label='RG'
@@ -56,6 +52,12 @@ export default function FormEntregador () {
                                     /> 
                                 </Form.Input>
 
+
+                            </Form.Group>
+                            
+                            <Form.Group>
+
+                                
                                 <Form.Input
                                     fluid
                                     label='DT Nascimento'
@@ -117,12 +119,16 @@ export default function FormEntregador () {
                                 </Form.Input>
 
 
+                            </Form.Group>
 
-                                <Form.Input
+                            <Form.Group widths='equal'>
+
+                            <Form.Input 
                                     required
                                     fluid
                                     label='Rua'
                                     maxLength="100"
+
                                 />
 
                                 <Form.Input
@@ -131,6 +137,13 @@ export default function FormEntregador () {
                                     label='Número'
                                     maxLength="100"
                                 />
+
+                            </Form.Group>
+
+                            <Form.Group widths='equal'>
+
+
+                            
 
                                 <Form.Input
                                     required
@@ -157,18 +170,37 @@ export default function FormEntregador () {
                             
 
                             
-                                <Select placeholder='Selecione' options={estados} />
+
+                            </Form.Group>
 
 
-                            
+                            <Form.Group>
 
-
-
-
-
+                           <label>uf</label> 
+                            <Select placeholder='Selecione' options={estados} />
 
 
                             </Form.Group>
+                            
+                            <Form.Group widths='equal' >
+                            <Form.Input 
+                                    required
+                                    fluid
+                                    label='Complemento'
+                                    maxLength="100"
+
+                                />
+
+                            </Form.Group>
+
+                            <Form.Group>
+
+                            
+
+                            </Form.Group>
+
+
+
                         
                         </Form>
                         
