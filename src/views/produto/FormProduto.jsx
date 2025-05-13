@@ -1,11 +1,20 @@
 import InputMask from 'comigo-tech-react-input-mask';
-import React from "react";
+import React, { useState } from "react";
 import 'semantic-ui-css/semantic.min.css';
 import { Button, Container, Divider, Form, Icon } from 'semantic-ui-react';
 
 
 
 export default function FormProduto() {
+
+    const [titulo, setTitulo] = useState();
+    const [codigoDoProduto, setCodigoDoProduto] = useState();
+    const [descricao, setDescricao] = useState();
+    const [valorUnitario, setValorUnitario] = useState();
+    const [tempoDeEntregaMinimoEmMinutos, setTempoDeEntregaMinimoEmMinutos] = useState();
+    const [tempoDeEntregaMaximoEmMinutos, setTempoDeEntregaMaximoEmMinutos] = useState();
+
+
 
     return (
 
@@ -68,7 +77,7 @@ export default function FormProduto() {
 
                                 <Form.Input
                                     fluid
-                                    label='Tempo de Entega Minimo em Minutos'
+                                    label='Tempo de Entrega Minimo em Minutos'
                                     width={6}
                                 >
                                     <InputMask
@@ -81,7 +90,7 @@ export default function FormProduto() {
 
                                 <Form.Input
                                     fluid
-                                    label='Tempo de Entega Máximo em Minutos'
+                                    label='Tempo de Entrega Máximo em Minutos'
                                     width={6}
                                 >
                                     <InputMask

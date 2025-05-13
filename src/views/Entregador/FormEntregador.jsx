@@ -1,7 +1,32 @@
 import InputMask from 'comigo-tech-react-input-mask';
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Divider, Form, Icon, Select } from 'semantic-ui-react';
 export default function FormEntregador () {
+
+
+    
+   const [nome, setNome] = useState();
+   const [cpf, setCpf] = useState();
+   const [rg, setRg] = useState();
+   const [dataNascimento, setDataNascimento] = useState();
+   const [foneCelular, setFoneCelular] = useState();
+   const [foneFixo, setFoneFixo] = useState();
+   const [quantidadeDeEntregasRealizadas, setquantidadeDeEntregasReal] = useState();
+   const [valorDoFrente, setvalorDoFrente] = useState();
+   const [rua, setrua] = useState();
+   const [numero, setnumero] = useState();
+   const [Bairro, setbairro] = useState();
+   const [cidade, setcidade] = useState();
+   const [cep, setcep] = useState();
+   const [uf, setuf] = useState();
+   const [complemento, setcomplemneto] = useState();
+
+
+
+
+
+
+
 
     const estados = [
         { key: 'af', value: 'af', text: 'Pernambuco' },
