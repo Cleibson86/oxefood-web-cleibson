@@ -1,7 +1,10 @@
+import axios from "axios";
 import InputMask from 'comigo-tech-react-input-mask';
 import React, { useState } from "react";
 import 'semantic-ui-css/semantic.min.css';
 import { Button, Container, Divider, Form, Icon } from 'semantic-ui-react';
+import MenuSistema from '../../MenuSistema';
+
 
 
 
@@ -14,11 +17,34 @@ export default function FormProduto() {
     const [tempoDeEntregaMinimoEmMinutos, setTempoDeEntregaMinimoEmMinutos] = useState();
     const [tempoDeEntregaMaximoEmMinutos, setTempoDeEntregaMaximoEmMinutos] = useState();
 
+     function salvar() {
+
+		let clienteRequest = {
+		     titulo: titulo,
+		     descricao: descricao,
+		     valorUnitario: valorUnitario,
+		     tempoDeEntregaMinimoEmMinutos: tempoDeEntregaMinimoEmMinutos,
+		     tempoDeEntregaMaximoEmMinutos: tempoDeEntregaMaximoEmMinutos
+		}
+	
+		axios.post("http://localhost:8080/api/cliente", clienteRequest)
+		.then((response) => {
+		     console.log('Cliente cadastrado com sucesso.')
+		})
+		.catch((error) => {
+		     console.log('Erro ao incluir o um cliente.')
+		})
+	}
+
+
 
 
     return (
 
         <div>
+            
+            <MenuSistema tela={'Produto'} />
+            
 
             <div style={{ marginTop: '3%' }}>
 
@@ -39,6 +65,8 @@ export default function FormProduto() {
                                     fluid
                                     label='Titulo'
                                     maxLength="100"
+                                    value={titulo}
+                                    onChange={e => setTitulo(e.target.value)}
                                 />
 
                                 <Form.Input
@@ -48,6 +76,8 @@ export default function FormProduto() {
                                     <InputMask
                                         required
                                         mask="999.999.999-99"
+                                        value={codigoDoProduto}
+                                        onChange={e => setCodigoDoProduto(e.target.value)}
                                     />
                                 </Form.Input>
 
@@ -59,6 +89,8 @@ export default function FormProduto() {
                                     label='Descrição'
                                     placeholder='Informe a descrição do Produto'
                                     style={{ width: '600%' }}
+                                    value={descricao}
+                                    onChange={e => setDescricao(e.target.value)}
                                 />
 
                             </Form.Group>
@@ -72,6 +104,8 @@ export default function FormProduto() {
                                     width={6}>
                                     <InputMask
                                         mask="(99) 9999.9999"
+                                        value={valorUnitario}
+                                        onChange={e => setValorUnitario(e.target.value)}
                                     />
                                 </Form.Input>
 
@@ -84,6 +118,8 @@ export default function FormProduto() {
                                         mask="99/99/9999"
                                         maskChar={null}
                                         placeholder="30"
+                                        value={tempoDeEntregaMinimoEmMinutos}
+                                        onChange={e => setTempoDeEntregaMinimoEmMinutos(e.target.value)}
                                     />
                                 </Form.Input>
 
@@ -97,6 +133,8 @@ export default function FormProduto() {
                                         mask="99/99/9999"
                                         maskChar={null}
                                         placeholder="40"
+                                        value={tempoDeEntregaMaximoEmMinutos}
+                                        onChange={e => setTempoDeEntregaMaximoEmMinutos(e.target.value)}
                                     />
                                 </Form.Input>
 
@@ -130,6 +168,8 @@ export default function FormProduto() {
                                 labelPosition='left'
                                 color='blue'
                                 floated='right'
+                                onClick={() => salvar()}
+
                             >
                                 <Icon name='save' />
                                 Salvar
